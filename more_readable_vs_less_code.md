@@ -20,13 +20,13 @@ The fact that the concrete implementation is not what I’m looking for, I would
 ```
 public class LoanServiceImpl implements LoanService {
 
-    final BigDecimal baseCoefficient = 2;
+    private final BigDecimal baseCoefficient = 2;
 
     @Autowired
     private final EmployeeService employeeService;
 
     @Override
-    public BigDecimal calculateLoan(@NotNull Long employeeNumber) {
+    public BigDecimal calculateLoan(@NotNull final Long employeeNumber) {
         Employee employee = employeeService.findByEmployeeNumber(employeeNumber);
 
         baseCoefficient = isEmployeeHiredLongerThanOneYearAgo(employee) ? baseCoefficient + 2 : baseCoefficient;
@@ -48,3 +48,20 @@ public class LoanServiceImpl implements LoanService {
 }
 
 ```
+But wait a moment! didn't we agreed, that we write methods to avoid having redundant chunk of functionality? then where is the need for repeatative code? I mean as you see we just called the private methods just once, so why should we bothered ourslef to create all these 4 private methods?
+
+The answer is, **please forget about this old stinky out of fashion belief which probably we learned in very first day of "learning programming in one day" course!**
+>**You are almost always welcome to sacrifice writing less code in favor of having more readable code.**
+
+
+
+### FAQ: 
+
+* But the methods are used just once!
+    - So what?
+* Now the methods are private, how can I write unit test for them?
+    - You don't! you should assert the behavior of the `calculateLoan` method by mocking `EmployeeService`, how cool am I ? ):
+* Why should I write more lines of code, while I could botch everything together and look more like a newbies?
+    - Because you are caring more about looking like an experienced developer and having more readable and maintaniable code!
+
+
