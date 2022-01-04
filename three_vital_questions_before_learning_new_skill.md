@@ -7,7 +7,7 @@ we are living in a world, within *TIME* is a really confusing value!
 As a developer I used to have mornings which I woke up with this horrifying thought that what on the earth new skill got trendy while I was asleep since last night!
 Let me tell you a mind blowing, one hundred percent scientific story! 
 
->In ancient era, there was a strong belief that universe is on the horns of a gigantic cow and the cow itself is on the back of a more gigantic fish and the fish itself is in the water!
+>In the medival era, there was a strong [belief](https://en.wikipedia.org/wiki/Kujata) among muslims called *Kujata*, it suggests that universe is on the horns of a gigantic cow and the cow itself is on the back of a more gigantic fish and the fish itself is in the water!
 Therefore, reason of the earthquake is, times that the cow of our story gets tired and shake his neck! too intuitive, right!?
 
 <p align="center">
@@ -25,7 +25,12 @@ I invite you to think about it , Whenever you are rushing to append a new skill 
 * Do I have any possible involvement with the new skill which I am going to learn latest in next one month after learning it!
 
 
-And make sure you got three **yes** answer in your pocket, otherwise you are actually trying to put a gigantic cow on the back of a damn blameless fish, for now reason! 
+And make sure you got three **yes** answer in your pocket, otherwise you are actually trying to put a gigantic cow on the back of a damn blameless fish, for no reason! 
 
-Following I will try to sum up some prerequisite for some trendy skills and try to keep this list updated, so make sure you save this page!
+One of the very common situation is when that full skill developer is supposed to do more than a simple task or need to provide a good answer why he/she suggesting that namely framework to use or more dramatic is when he actually got done with the 600 hours udemy course and he is holding a golden certificate but he is scared to deaht to dig into the documentation and suggest a defensible solution, while he walks in the office while he has a "Mr. Omniscient" lable on his shirt. 
 
+So, let's admit it, nobody can keep up with the IT world's new commers and honestly there is no need for. The truth is all the existing perfect frameworks and tools are standing on the shoulders of the Prime gients. So you think that you have to learn K8S, tell me, how well do you know Docker or the idea of the resource virtualisation?
+Or you think you have to absolutely begin with the flutter? then let me know, how comftable do you feel with EM and REM while changing the size of an image?!
+Do you still think that you can write the Authentication/Authorization mechanisem of your app by your own and still belive that the backend development world has nothing to give you anymore?!
+
+Think about it...
