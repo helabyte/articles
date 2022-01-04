@@ -29,7 +29,7 @@ And make sure you got three **yes** answer in your pocket, otherwise you are act
 
 One of the very common situation is when that full skill developer is supposed to do more than a simple task or need to provide a good answer why he/she suggesting that namely framework to use or more dramatic is when he actually got done with the 600 hours udemy course and he is holding a golden certificate but he is scared to deaht to dig into the documentation and suggest a defensible solution, while he walks in the office while he has a "Mr. Omniscient" lable on his shirt. 
 
-So, let's admit it, nobody can keep up with the IT world's new commers and honestly there is no need for. The truth is all the existing perfect frameworks and tools are standing on the shoulders of the Prime gients. So you think that you have to learn K8S, tell me, how well do you know Docker or the idea of the resource virtualisation?
+So, let's admit it, nobody can keep up with the IT world's newcomers and honestly there is no need for. The truth is all the existing perfect frameworks and tools are standing on the shoulders of the Prime gients. So you think that you have to learn K8S, tell me, how well do you know Docker or the idea of the resource virtualisation?
 Or you think you have to absolutely begin with the flutter? then let me know, how comftable do you feel with EM and REM while changing the size of an image?!
 Do you still think that you can write the Authentication/Authorization mechanisem of your app by your own and still belive that the backend development world has nothing to give you anymore?!
 
