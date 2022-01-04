@@ -1,5 +1,4 @@
 # Writing more readable VS. less code
-
 Imagine you are supposed to implement an interface which is going to be responsible for calculating the amount of money which can be lend to an employee. Obviously it depends on some factors but let’s assume that these are our deciding factors:
 
 - Is the employee  hired for longer than two years?
