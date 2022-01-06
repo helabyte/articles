@@ -1,3 +1,8 @@
+<p align="center">
+  <img width="540" height="540" src="https://github.com/helabyte/articles/blob/main/resources/more_readable_less_code_small.jpg">
+</p>
+
+
 # Writing more readable VS. less code
 Imagine you are supposed to implement an interface which is going to be responsible for calculating the amount of money which can be lend to an employee. Obviously it depends on some factors but let’s assume that these are our deciding factors:
 
@@ -19,40 +24,40 @@ The fact that the concrete implementation is not what I’m looking for, I would
 ```
 public class LoanServiceImpl implements LoanService {
 
-    private final BigDecimal baseCoefficient = 2;
+    private final static BigDecimal baseCoefficient = BigDecimal.valueOf(2);
+    private final EmployeeService employeeService;
 
     public LoanServiceImpl(final EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
 
     @Override
-    public BigDecimal calculateLoan(@NotNull final Long employeeNumber) {
-    
+    public BigDecimal calculateLoan(@NotNull Long employeeNumber) {
+        coefficient = baseCoefficient;
         Employee employee = employeeService.findByEmployeeNumber(employeeNumber);
 
-        baseCoefficient = isEmployeeHiredLongerThanOneYearAgo(employee) ? baseCoefficient + 2 : baseCoefficient;
-        baseCoefficient = hasEmployeeCurrentDebt(employee) ? baseCoefficient + 2 : baseCoefficient;
-        baseCoefficient = hasEmployeeOutstandingPerformanceInLastYear(employee) ? baseCoefficient + 2 : baseCoefficient;
-        baseCoefficient = isEmployeeOlderThanSixty(employee) ? baseCoefficient + 2 : baseCoefficient;
+        coefficient = isEmployeeHiredLongerThanOneYearAgo(employee) ? coefficient.plus(baseCoefficient) : coefficient;
+        coefficient = hasEmployeeCurrentDebt(employee) ? coefficient.plus(baseCoefficient) : coefficient;
+        coefficient = hasEmployeeOutstandingPerformanceInLastYear(employee) ? coefficient.plus(baseCoefficient) : coefficient;
+        coefficient = isEmployeeOlderThanSixty(employee) ? coefficient.plus(baseCoefficient) : coefficient;
 
-        return employee.getMonthlySalary.multiply(baseCoefficient);
-
+        return employee.getMonthlySalary.multiply(coefficient);
     }
 
-    private boolean isEmployeeHiredLongerThanOneYearAgo(employee){...}
+    private boolean isEmployeeHiredLongerThanOneYearAgo(employee) {...}
 
-    private boolean hasEmployeeCurrentDebt(employee){...}
+    private boolean hasEmployeeCurrentDebt(employee) {...}
 
-    private boolean hasEmployeeOutstandingPerformanceInLastYear(employee){...}
+    private boolean hasEmployeeOutstandingPerformanceInLastYear(employee) {...}
 
-    private boolean isEmployeeOlderThanSixty(employee){...}
+    private boolean isEmployeeOlderThanSixty(employee) {...}
 }
 
 ```
 But wait a moment! didn't we agree, that we write methods to avoid having redundant chunk of functionality? Where is the need for repeatative code then? I mean as you see we called the private methods just once, so why should we bother ourslef to create all these four private methods?
 
-The answer is, **please forget about this old stinky out of fashion belief which probably we learned in the first hour of "learning programming in one day" course!**
->**You are almost always welcome to sacrifice writing less code in favor of having more readable code.**
+The answer is, **please forget about this old stinky out of fashion belief which probably we learned in the first hour of "learning programming in one day" course!**  
+>**You are almost always welcome to sacrifice writing less code in favor of having more readable code.**  
 
 ### FAQ: 
 
