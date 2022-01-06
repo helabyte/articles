@@ -1,9 +1,9 @@
 # Writing more readable VS. less code
 Imagine you are supposed to implement an interface which is going to be responsible for calculating the amount of money which can be lend to an employee. Obviously it depends on some factors but let’s assume that these are our deciding factors:
 
-- Is the employee hired for longer than two years?
+- has the employee been hired for longer than two years?
 - Has the employee a current debt?
-- Has the employee any outstanding performance in the last year?
+- Has the employee had any outstanding performance in the last year?
 - Is the employee older than 60? (Your mean boss tries to avoid lending money to an good old friend who has put more than 20 years sweat and blood into growing his company and soon is headed to retirement!)
 
 Based on the answers to the above questions the employee would be eligible to get a loan for amount between 2 and 10 times of his monthly salary.
@@ -21,16 +21,18 @@ public class LoanServiceImpl implements LoanService {
 
     private final BigDecimal baseCoefficient = 2;
 
-    @Autowired
-    private final EmployeeService employeeService;
+    public LoanServiceImpl(final EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     @Override
     public BigDecimal calculateLoan(@NotNull final Long employeeNumber) {
+    
         Employee employee = employeeService.findByEmployeeNumber(employeeNumber);
 
         baseCoefficient = isEmployeeHiredLongerThanOneYearAgo(employee) ? baseCoefficient + 2 : baseCoefficient;
         baseCoefficient = hasEmployeeCurrentDebt(employee) ? baseCoefficient + 2 : baseCoefficient;
-        baseCoefficient = hasEmployeeCurrentDebt(employee) ? baseCoefficient + 2 : baseCoefficient;
+        baseCoefficient = hasEmployeeOutstandingPerformanceInLastYear(employee) ? baseCoefficient + 2 : baseCoefficient;
         baseCoefficient = isEmployeeOlderThanSixty(employee) ? baseCoefficient + 2 : baseCoefficient;
 
         return employee.getMonthlySalary.multiply(baseCoefficient);
@@ -41,7 +43,7 @@ public class LoanServiceImpl implements LoanService {
 
     private boolean hasEmployeeCurrentDebt(employee){...}
 
-    private boolean hasEmployeeCurrentDebt(employee){...}
+    private boolean hasEmployeeOutstandingPerformanceInLastYear(employee){...}
 
     private boolean isEmployeeOlderThanSixty(employee){...}
 }
