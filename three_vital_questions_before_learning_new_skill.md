@@ -1,7 +1,11 @@
 
-### TQWADSAHBSTFSOHMC or 
-##### Three Vital Questions Which Any Developer Should Ask Himself Before Swallowing The First Sip Of His Morning Coffee
+
+<p align="center">
+  <img src="https://github.com/helabyte/articles/blob/main/resources/three_vital_question/Three_Vital_Questions.jpg">
+</p>
+
 #
+
 
 we are living in a world in which *TIME* is a really confusing value. 
 As a developer I used to have mornings which I woke up with the horrifying thought of which new skill got trendy, while I was asleep last night. 
